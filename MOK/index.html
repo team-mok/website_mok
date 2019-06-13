@@ -1,0 +1,25 @@
+<?php
+$page_class = 'index';
+
+$title = 'lesson';
+$description = 'lesson';
+$keywords = '';
+
+$add_css_area = <<< EOD
+<link rel="stylesheet" href="/css/index.css">
+EOD;
+
+$add_js_area = <<< EOD
+EOD;
+
+include $_SERVER['DOCUMENT_ROOT'] . '/tmpl/header.html' ?>
+<main>
+<article class="container <?php echo $page_class; ?>">
+	<div class="main-visual">
+		<div class="grid-container">
+			<div class="img-area"></div>
+		</div>
+	</div>
+</article>
+</main>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/tmpl/footer.html' ?>

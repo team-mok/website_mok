@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><?php if ( $page_class !== 'index' ) echo $title.' | '; ?>web</title>
+		<meta name="description" content="<?php if ( $description !== '' ) echo $description; ?>">
+		<meta name="keywords" content="<?php if ( $keywords !== '' ) echo ','.$keywords; ?>">
+		<meta property="og:title" content="<?php if ( $page_class !== 'index' ) echo $title.' | '; ?>webサイト制作 MOK">
+		<meta property="og:type" content="company">
+		<meta property="og:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://").$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]; ?>">
+		<meta property="og:image" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://").$_SERVER["HTTP_HOST"]; ?>/images/share.png">
+		<link rel="icon" href="/favicon.ico">
+		<?php if ( $add_css_area !== '' ) echo $add_css_area."\n"; ?>
+		<link rel="stylesheet" href="/css/import.css">
+		<?php if ( $add_js_area !== '' ) echo $add_js_area."\n"; ?>
+		<script src="/js/jquery.js"></script>
+		<script src="/js/common.js"></script>
+	</head>
+	<body id="top"<?php if ( $page_class !== '' ) echo ' class="' . $page_class . '"'; ?>>
+		<header>
+			<section> 
+				<h1>logo</h1>
+				<div class="flex-wrapper">
+					<nav class="h-nv">
+						<ul>
+							<li><a href="">WE ARE</a></li>
+							<li><a href="">WE DO</a></li>
+							<li><a href="">WE WORK</a></li>
+							<li><a href="">ABOUT MEMBER</a></li>
+						</ul>
+					</nav>
+					<div class="mail">
+						<span></span>
+					</div>
+				</div>
+				<div class="menu">
+					<svg class="inline-svg" version="1.1"
+     				width="64px" height="64px" viewBox="0 0 32 22.5" xml:space="preserve">
+                    	<g class="svg-menu-toggle">
+							<path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0
+                        	c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z">
+                    		</path>
+                    		<path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
+                    		</path>
+                    		<path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0
+                       		c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
+                    		</path>
+                    	</g>
+        			</svg>
+				</div>
+				<div class="g-nv-bg"></div>
+				<div class="g-nv">
+					<h1 class="nv-h1">logo</h1>
+					<nav>
+						<ul>
+							<li><a href="">WE ARE</a></li>
+							<li><a href="">WE DO</a></li>
+							<li><a href="">WE WORK</a></li>
+							<li><a href="">ABOUT MEMBER</a></li>
+						</ul>
+					</nav>
+				</div>
+ 				<div class="arrowWrap">
+    				<div class="arrowInner">
+      					<p>SCROLL</p>
+      					<div class="arrow"></div>
+    				</div>
+				</div>
+			</section>
+		</header>

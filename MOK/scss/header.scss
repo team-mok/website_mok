@@ -1,0 +1,71 @@
+@import "accordion";
+@import "scroll";
+
+/* header
+-----------------------------------*/
+header {
+	margin-top: 80px;
+	position: fixed;
+	width: 100%;
+
+	section {
+		display: flex;
+
+		> h1 {
+			align-items: center;
+    		display: flex;
+    		font-size: 32px;
+    		margin-left: 60px;
+    		width: 114px;
+		}
+
+		.flex-wrapper {
+			align-items: center;
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+
+			.mail {
+				display: flex;
+				justify-content: flex-end;
+				margin-right: 80px;
+
+				span {
+					background-color: $MAIN_COLOR ;
+					display: block;
+					height: 80px;
+					width: 80px;
+				}
+			}
+
+			.h-nv {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $MIN_SP_WIDTH) {
+header {
+
+	section {
+
+		.flex-wrapper {
+
+			.h-nv {
+				display: block;
+				margin-right: 120px;
+
+				ul {
+					display: flex;
+					justify-content: space-between;
+
+					li:not(last-of-type) {
+						margin-right: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+}

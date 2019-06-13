@@ -1,0 +1,16 @@
+/*======*/
+/* 共通 */
+/*======*/
+/* 段落
+-----------------------------------*/
+.indent {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+ /* グリッド
+-----------------------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}

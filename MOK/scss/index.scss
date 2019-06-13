@@ -1,0 +1,24 @@
+/*=======*/
+/* index */
+/*=======*/
+@import "variable";
+/* main-visual
+-----------------------------------*/
+.index .main-visual {
+	height: 100vh;
+	position: relative;
+
+	.grid-container {
+		grid-template-rows: repeat(12, 1fr);
+
+		.img-area {
+			width: 1440px;
+			height: 600px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #666;
+		}
+	}
+}
