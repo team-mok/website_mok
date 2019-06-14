@@ -1,0 +1,61 @@
+
+/* scroll
+-----------------------------------*/
+.arrowWrap {
+	position: fixed;
+	right: 84px;
+	bottom: 20px;
+
+	.arrowInner {
+
+		p {
+			font-size: 17px;
+			text-align: end;
+		}
+
+		.arrow {
+			width: 2.63px;
+			height: 63.02px;
+				margin: 12.23px auto 0;
+			background-color: #eee;
+			position: relative;
+			overflow: hidden;
+
+			&::before {
+				content: '';
+				width: 2.63px;
+				height: 63.02px;
+				margin: 12.23px auto 0;
+				background-color: #000;
+				position: absolute;
+				top: -113.02px;
+				left: 0;
+				-webkit-animation: arrow 2.5s ease 0s infinite normal;
+				animation: arrow 2.5s ease 0s infinite normal;
+			}
+		}
+	}
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  60% {
+    -webkit-transform: translate3d(-50%, 100px, 0);
+    transform: translate3d(-50%, 100px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-50%, 100px, 0);
+    transform: translate3d(-50%, 100px, 0);
+  }
+}
+
+
+
+
+
+

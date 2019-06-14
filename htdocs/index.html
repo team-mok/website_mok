@@ -1,0 +1,66 @@
+<?php
+$page_class = 'index';
+
+$title = 'lesson';
+$description = 'lesson';
+$keywords = '';
+
+$add_css_area = <<< EOD
+<link rel="stylesheet" href="/css/index.css">
+EOD;
+
+$add_js_area = <<< EOD
+EOD;
+
+include $_SERVER['DOCUMENT_ROOT'] . '/tmpl/header.html' ?>
+<main>
+<article class="container <?php echo $page_class; ?>">
+	<div class="main-visual">
+		<div class="img-area"></div>
+	</div>
+	<section class="what-we-are">
+		<h2 class="heading02">MAID IN KINGDAM</h2>
+		<div class="tx-area">
+			<p>テキストテキストテキストテキスト<br>
+			テキストテキストテキスト<br>
+			テキストテキストテキストテキストテキストテキスト<br>
+			テキストテキストテキストテキストテキストテキスト</p>
+			<p>テキストテキストテキストテキストテキスト<br>
+			テキストテキストテキストテキストテキストテキスト<br>
+			テキストテキストテキストテキスト</p>
+			</div>
+		<p class="buttonOverlay"><a href=""><span>MORE</span></a></p>		
+	</section>
+	<section class="what-we-do">
+		<h2 class="heading02">MAID IN KINGDAM</h2>
+		<div class="circle-wrapper">
+			<div class="circle-area">
+				<a href="">
+					<p class="circle"></p>
+					<h3 class="heading03">WEB SITE</h3>
+					<p class="tx-area02">テキストテキストテキストテキスト<br>
+					テキストテキストテキスト</p>
+				</a>
+			</div>
+			<div class="circle-area">
+				<a href="">
+					<p class="circle"></p>
+					<h3 class="heading03">WEB SERVICE</h3>
+					<p class="tx-area02">テキストテキストテキストテキスト<br>
+					テキストテキストテキスト</p>
+				</a>
+			</div>
+			<div class="circle-area">
+				<a href="">
+					<p class="circle"></p>
+					<h3 class="heading03">WORD PRESS</h3>
+					<p class="tx-area02">テキストテキストテキストテキスト<br>
+					テキストテキストテキスト</p>
+				</a>
+			</div>
+		</div>
+		<p class="buttonOverlay"><a href=""><span>MORE</span></a></p>		
+	</section>
+</article>
+</main>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/tmpl/footer.html' ?>

@@ -1,0 +1,58 @@
+/*======*/
+/* 共通 */
+/*======*/
+/* 段落
+-----------------------------------*/
+.indent {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+ /* グリッド
+-----------------------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* タイトル
+-----------------------------------*/
+.heading02 {
+	font-size: 8.5vw;
+	font-weight: bold;
+	height: 12.5vw;
+	text-align: center;
+}
+
+.heading03 {
+	font-size: 3.2vw;
+	font-weight: bold;
+	margin-bottom: 4.3vw;
+	text-align: center;
+}
+
+/* テキストエリア
+-----------------------------------*/
+.tx-area {
+	font-size: 3.2vw;
+	text-align: center;
+	line-height: 2.2;
+}
+
+.tx-area02 {
+	font-size: 2.7vw;
+	text-align: center;
+	line-height: 2.2;
+}
+
+/* サークル
+-----------------------------------*/
+.circle {
+	border: solid 1px $MAIN_COLOR;
+	border-radius: 50%;
+	height: 27vw;
+	margin: 0 auto 5.3vw;
+	width: 27vw;
+}
+
+@import "buttonOverlay";		
