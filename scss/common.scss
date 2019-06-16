@@ -8,6 +8,14 @@
 	text-indent: -1em;
 }
 
+/* clearfix
+-----------------------------------*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
  /* グリッド
 -----------------------------------*/
 .grid-container {
@@ -55,4 +63,6 @@
 	width: 27vw;
 }
 
-@import "buttonOverlay";		
+@import "buttonOverlay";
+
+@import "textRightLeft";			

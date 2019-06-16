@@ -1,0 +1,89 @@
+/*=======*/
+/* index */
+/*=======*/
+/* main-visual
+-----------------------------------*/
+.index .main-visual { margin-top: 240px; }
+
+.index .main-visual .img-area { background-color: #666; height: 80vw; margin: 0 auto; width: 100%; }
+
+@media screen and (min-width: 768px) { .index .main-visual { margin-top: 240px; }
+  .index .main-visual .img-area { margin: 0 auto; width: 1440px; } }
+
+/* what-we-are
+-----------------------------------*/
+.index .what-we-are { margin-top: 40.4vw; }
+
+.index .what-we-are .tx-area { margin: 15.3vw auto 0; width: 77.9vw; }
+
+.index .what-we-are .tx-area p:not(:last-of-type) { margin-bottom: 12.3vw; }
+
+/* what-we-do
+-----------------------------------*/
+.index .what-we-do { margin-top: 35.2vw; }
+
+.index .what-we-do .circle-wrapper { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[4]; grid-template-columns: repeat(4, 1fr); margin-top: 16vw; }
+
+.index .what-we-do .circle-wrapper .circle-area:first-of-type { -ms-grid-column: 1; -ms-grid-column-span: 2; grid-column: 1/3; }
+
+.index .what-we-do .circle-wrapper .circle-area:nth-of-type(2) { -ms-grid-column: 2; -ms-grid-column-span: 2; grid-column: 2/4; margin-top: 11vw; }
+
+.index .what-we-do .circle-wrapper .circle-area:last-of-type { -ms-grid-column: 3; -ms-grid-column-span: 2; grid-column: 3/5; margin-top: 11vw; }
+
+/* we-worked
+-----------------------------------*/
+.index .we-worked { margin-top: 32vw; }
+
+.index .we-worked .slick-list .slide-img:nth-of-type(1) { margin: 0 auto auto 0; padding-left: 8.8vw; }
+
+.index .we-worked .slick-list .slide-img:nth-of-type(2) { margin: 0 0 auto auto; padding-right: 8.5vw; }
+
+.index .we-worked .slick-list .slide-img:nth-of-type(3) { margin: 0 auto auto 0; padding-left: 5.3vw; }
+
+.index .we-worked .slick-list .slide-img:nth-of-type(4) { margin: 0 0 auto auto; padding-right: 15.9vw; }
+
+.index .we-worked .slick-list .slide-img:nth-of-type(5) { margin: 0 0 auto auto; padding-left: 15.9vw; }
+
+.index .we-worked .slick-list .slide-img:nth-of-type(odd) { float: left; }
+
+.index .we-worked .slick-list .slide-img:nth-of-type(even) { float: right; }
+
+.index .we-worked .slick-list .slide-img:not(:last-of-type) { margin-bottom: 5.3vw; }
+
+.index .we-worked .slick-list .slide-img a { display: block; position: relative; height: 30vw; width: 53vw; }
+
+.index .we-worked .slick-list .slide-img a .img-area { background-color: #666; height: 100%; width: 100%; }
+
+.index .we-worked .slick-list .slide-img a div { left: 0; margin-left: 4.6vw; top: 100%; -webkit-transform: translate(0, -100%); -ms-transform: translate(0, -100%); transform: translate(0, -100%); position: absolute; z-index: 1; }
+
+.index .we-worked .slick-list .slide-img a div .day { color: #FFF; font-size: 2.1vw; line-height: 2; margin-bottom: 1vw; }
+
+.index .we-worked .slick-list .slide-img a div .tx-area02 { color: #FFF; line-height: normal; margin-bottom: 5vw; }
+
+/* we-worked
+-----------------------------------*/
+.index .about-member { margin-top: 35.2vw; }
+
+.index .about-member .circle-wrapper { font-size: 0; margin-top: 16vw; text-align: center; }
+
+.index .about-member .circle-wrapper .circle-area { display: inline-block; vertical-align: top; width: 26.7vw; }
+
+.index .about-member .circle-wrapper .circle-area:nth-of-type(1) { margin-right: 5.3vw; }
+
+.index .about-member .circle-wrapper .circle-area:nth-of-type(2) { margin-left: 5.3vw; }
+
+.index .about-member .circle-wrapper .circle-area:nth-of-type(3) { display: block; margin: 10.6vw auto 0; }
+
+.index .about-member .circle-wrapper .circle-area .circle { margin-bottom: 4.8vw; }
+
+.index .about-member .circle-wrapper .circle-area .tx-area02 { font-size: 1.6vw; margin-bottom: 0.8vw; }
+
+.index .about-member .circle-wrapper .circle-area a { display: block; }
+
+.index .about-member .circle-wrapper .circle-area .ic-area { font-size: 0; }
+
+.index .about-member .circle-wrapper .circle-area .ic-area p { display: inline-block; }
+
+.index .about-member .circle-wrapper .circle-area .ic-area p:first-of-type { margin-right: 3.3vw; }
+
+.index .about-member .textRightLeft { margin: 32vw auto 0; }

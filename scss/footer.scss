@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/*==========*/
+/* フッター */
+/*========*/
+footer {
+	display: flex;
+	height: 31.9vw;
+	justify-content: center;
+    align-items: center;
+
+    p {
+    	font-size: 1.6vw;
+    }
+}

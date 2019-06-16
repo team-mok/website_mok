@@ -1,0 +1,126 @@
+/* アコーディオン
+-----------------------------------*/
+header {
+    position: relative;
+
+    .g-nv ul {
+    }
+
+    .menu {
+        position: fixed;
+        bottom: 2.6vw;
+        left: 10.7vw;
+        width: 8.5vw;
+        height: 5vw;
+        cursor: pointer;
+        z-index: 101;
+
+        .menu-inner {
+            position: relative;
+            width: 100%;
+            display: block;
+            margin: auto;
+
+            span {
+                position: absolute;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: .6vw;
+                background: $MAIN_COLOR;
+                transition: all .5s;
+
+                &:first-of-type {
+                    top: 0;
+                }
+
+                &:nth-of-type(2) {
+                    top: 2.2vw;
+                }
+
+                &:last-of-type {
+                    top: 4.4vw;
+                }
+            }
+        }
+
+        &.pushed {
+
+            .menu-inner span {
+
+                &:first-child {
+                    top: 2.1vw;
+                    left: -0.6vw;
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    top: 2.1vw;
+                    left: -0.6vw;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .g-nv {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: $MIN_SP_WIDTH) {
+header {
+
+    .menu {
+        top: 50vh;
+        transform: translate(0, -50%);
+        left: 4.3vw;
+        width: 3.3vw;
+        height: 2vw;
+
+        .menu-inner {
+
+            span {
+                height: .1vw;
+
+                &:first-of-type {
+                    top: 0;
+                }
+
+                &:nth-of-type(2) {
+                    top: 0.9vw;
+                }
+
+                &:last-of-type {
+                    top: 1.8vw;
+                }
+
+            }
+        }
+
+        &.pushed {
+
+            .menu-inner span {
+
+                &:first-child {
+                    top: 0.7vw;
+                    left: -0.4vw;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    top: 0.7vw;
+                    left: -0.4vw;
+                }
+            }
+        }
+    }
+}
+}

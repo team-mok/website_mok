@@ -27,10 +27,16 @@ var isSP;
 
 //アコーディオン、ハンバーガー
     $('.menu').on('click', function(){
+        if ( $('header .menu').hasClass('pushed') == true ) {
+            $('header .g-nv').removeClass('opened');
+            $('header .g-nv').addClass('closed');
+        } else {
+            $('header .g-nv').addClass('opened');
+            $('header .g-nv').removeClass('closed');
+        }
         $('header .menu').toggleClass('pushed');
-        $('header').toggleClass('opened');
+        $('.g-nv').slideToggle();
     });
-
 
   //スクロール→ヘッダーフェード
     var startPos = 0,winScrollTop = 0;

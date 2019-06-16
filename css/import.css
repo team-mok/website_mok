@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/*=========*/
+/* リセット */
+/*=========*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+*, *::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+nav ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+a { color: #000; margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+/* change colours to suit your needs */
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+/* change colours to suit your needs */
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+ul { list-style: none; }
+
+/*======*/
+/* 共通 */
+/*======*/
+/* 段落
+-----------------------------------*/
+.indent { margin-left: 1em; text-indent: -1em; }
+
+/* clearfix
+-----------------------------------*/
+.clearfix::after { content: ""; display: block; clear: both; }
+
+/* グリッド
+-----------------------------------*/
+.grid-container { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[12]; grid-template-columns: repeat(12, 1fr); }
+
+/* タイトル
+-----------------------------------*/
+.heading02 { font-size: 8.5vw; font-weight: bold; height: 12.5vw; text-align: center; }
+
+.heading03 { font-size: 3.2vw; font-weight: bold; margin-bottom: 4.3vw; text-align: center; }
+
+/* テキストエリア
+-----------------------------------*/
+.tx-area { font-size: 3.2vw; text-align: center; line-height: 2.2; }
+
+.tx-area02 { font-size: 2.7vw; text-align: center; line-height: 2.2; }
+
+/* サークル
+-----------------------------------*/
+.circle { border: solid 1px #000; border-radius: 50%; height: 27vw; margin: 0 auto 5.3vw; width: 27vw; }
+
+/* buttonOverlay
+-----------------------------------*/
+.buttonOverlay { margin-top: 16vw; }
+
+.buttonOverlay a { display: block; position: relative; height: 16vw; width: 64vw; margin: 0 auto; }
+
+.buttonOverlay a span { position: absolute; top: 50%; left: 50%; color: #fff; font-size: 4.2vw; font-weight: bold; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); letter-spacing: .2em; }
+
+.buttonOverlay a::before { content: ''; position: absolute; height: 100%; width: 100%; top: 3vw; right: 3vw; background-color: #000; z-index: -1; -webkit-transition: -webkit-transform .2s ease-in-out; transition: -webkit-transform .2s ease-in-out; -o-transition: transform .2s ease-in-out; transition: transform .2s ease-in-out; transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }
+
+.buttonOverlay a::after { content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%; border: 1px solid #474E51; }
+
+.buttonOverlay a:hover::before { -webkit-transform: translate(3vw, -3vw); -ms-transform: translate(3vw, -3vw); transform: translate(3vw, -3vw); }
+
+.textRightLeft { height: 32vw; width: 78.9vw; text-align: center; overflow: hidden; background: #000; position: relative; }
+
+.textRightLeft a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.textRightLeft a:hover span { -webkit-animation: animButtonSpan 0.8s; animation: animButtonSpan 0.8s; }
+
+.textRightLeft a span { display: block; font-size: 5.3vw; font-weight: bold; color: #FFF; }
+
+@-webkit-keyframes animButtonSpan { 0% { -webkit-transform: translateX(0); transform: translateX(0);
+    opacity: 1; }
+  33% { -webkit-transform: translateX(29vw); transform: translateX(29vw);
+    opacity: 0; }
+  66% { -webkit-transform: translateX(-29vw); transform: translateX(-29vw);
+    opacity: 0; }
+  100% { -webkit-transform: translateX(0px); transform: translateX(0px);
+    opacity: 1; } }
+
+@keyframes animButtonSpan { 0% { -webkit-transform: translateX(0); transform: translateX(0);
+    opacity: 1; }
+  33% { -webkit-transform: translateX(29vw); transform: translateX(29vw);
+    opacity: 0; }
+  66% { -webkit-transform: translateX(-29vw); transform: translateX(-29vw);
+    opacity: 0; }
+  100% { -webkit-transform: translateX(0px); transform: translateX(0px);
+    opacity: 1; } }
+
+/* アコーディオン
+-----------------------------------*/
+header { position: relative; }
+
+header .menu { position: fixed; bottom: 2.6vw; left: 10.7vw; width: 8.5vw; height: 5vw; cursor: pointer; z-index: 101; }
+
+header .menu .menu-inner { position: relative; width: 100%; display: block; margin: auto; }
+
+header .menu .menu-inner span { position: absolute; left: 0; display: block; width: 100%; height: .6vw; background: #000; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; }
+
+header .menu .menu-inner span:first-of-type { top: 0; }
+
+header .menu .menu-inner span:nth-of-type(2) { top: 2.2vw; }
+
+header .menu .menu-inner span:last-of-type { top: 4.4vw; }
+
+header .menu.pushed .menu-inner span:first-child { top: 2.1vw; left: -0.6vw; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+
+header .menu.pushed .menu-inner span:nth-child(2) { opacity: 0; }
+
+header .menu.pushed .menu-inner span:last-child { top: 2.1vw; left: -0.6vw; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+header .menu .g-nv { display: none; }
+
+@media screen and (min-width: 768px) { header .menu { top: 50vh; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); left: 4.3vw; width: 3.3vw; height: 2vw; }
+  header .menu .menu-inner span { height: .1vw; }
+  header .menu .menu-inner span:first-of-type { top: 0; }
+  header .menu .menu-inner span:nth-of-type(2) { top: 0.9vw; }
+  header .menu .menu-inner span:last-of-type { top: 1.8vw; }
+  header .menu.pushed .menu-inner span:first-child { top: 0.7vw; left: -0.4vw; }
+  header .menu.pushed .menu-inner span:nth-child(2) { opacity: 0; }
+  header .menu.pushed .menu-inner span:last-child { top: 0.7vw; left: -0.4vw; } }
+
+/* scroll
+-----------------------------------*/
+.arrowWrap { position: fixed; right: 11.2vw; bottom: 2.6vw; }
+
+.arrowWrap .arrowInner p { font-size: 2.3vw; text-align: end; }
+
+.arrowWrap .arrowInner .arrow { width: 0.4vw; height: 8.4vw; margin: 1.6vw auto 0; background-color: #eee; position: relative; overflow: hidden; }
+
+.arrowWrap .arrowInner .arrow::before { content: ''; width: 0.6vw; height: 8.4vw; margin: 1.6vw auto 0; background-color: #000; position: absolute; top: -15vw; left: 0.13vw; -webkit-animation: arrow 2.5s ease 0s infinite normal; animation: arrow 2.5s ease 0s infinite normal; }
+
+@-webkit-keyframes arrow { 0% { -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0); }
+  60% { -webkit-transform: translate3d(-50%, 13.4vw, 0);
+    transform: translate3d(-50%, 13.4vw, 0); }
+  100% { -webkit-transform: translate3d(-50%, 13.4vw, 0);
+    transform: translate3d(-50%, 13.4vw, 0); } }
+
+@keyframes arrow { 0% { -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0); }
+  60% { -webkit-transform: translate3d(-50%, 13.4vw, 0);
+    transform: translate3d(-50%, 13.4vw, 0); }
+  100% { -webkit-transform: translate3d(-50%, 13.4vw, 0);
+    transform: translate3d(-50%, 13.4vw, 0); } }
+
+@media screen and (min-width: 768px) { .arrowWrap { position: fixed; right: 4.4vw; bottom: 0.83vw; }
+  .arrowWrap .arrowInner p { font-size: 0.83vw; text-align: end; }
+  .arrowWrap .arrowInner .arrow { width: 0.1vw; height: 3.3vw; margin: 0.6vw auto 0; background-color: #eee; position: relative; overflow: hidden; }
+  .arrowWrap .arrowInner .arrow::before { content: ''; width: 1.1vw; height: 3.3vw; margin: 0.6vw auto 0; background-color: #000; position: absolute; top: -4.3vw; left: 0.13vw; -webkit-animation: arrow 2.5s ease 0s infinite normal; animation: arrow 2.5s ease 0s infinite normal; }
+  @-webkit-keyframes arrow { 0% { -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0); }
+    60% { -webkit-transform: translate3d(-50%, 13.4vw, 0);
+      transform: translate3d(-50%, 3.8vw, 0); }
+    100% { -webkit-transform: translate3d(-50%, 13.4vw, 0);
+      transform: translate3d(-50%, 3.8vw, 0); } }
+  @keyframes arrow { 0% { -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0); }
+    60% { -webkit-transform: translate3d(-50%, 13.4vw, 0);
+      transform: translate3d(-50%, 3.8vw, 0); }
+    100% { -webkit-transform: translate3d(-50%, 13.4vw, 0);
+      transform: translate3d(-50%, 3.8vw, 0); } } }
+
+/* header
+-----------------------------------*/
+header { position: fixed; top: 9.6vw; width: 100%; }
+
+header section { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+header section > h1 { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 4.3vw; height: 7.9vw; margin-left: 8vw; width: 15.2vw; }
+
+header section .flex-wrapper { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; position: relative; margin: 0 0 0 auto; }
+
+header section .flex-wrapper .mail { position: absolute; top: 100%; right: 10.7vw; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); }
+
+header section .flex-wrapper .mail span { background-color: #000; display: block; height: 10.7vw; width: 10.7vw; }
+
+header section .flex-wrapper .h-nv { display: none; }
+
+@media screen and (min-width: 768px) { header { position: fixed; top: 3.8vw; }
+  header section { display: -webkit-box; display: -ms-flexbox; display: flex; }
+  header section > h1 { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 2vw; height: 3vw; margin-left: 3vw; width: 6vw; }
+  header section .flex-wrapper .mail { position: absolute; top: 100%; right: 4.1vw; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); }
+  header section .flex-wrapper .mail span { background-color: #000; display: block; height: 4.1vw; width: 4.1vw; }
+  header section .flex-wrapper .h-nv { display: block; margin-right: 12.5vw; }
+  header section .flex-wrapper .h-nv ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+  header section .flex-wrapper .h-nv ul li:not(:last-of-type) { margin-right: 2.1vw; } }
+
+/*==========*/
+/* フッター */
+/*========*/
+footer { display: -webkit-box; display: -ms-flexbox; display: flex; height: 31.9vw; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+footer p { font-size: 1.6vw; }

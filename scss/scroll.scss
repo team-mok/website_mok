@@ -1,0 +1,115 @@
+
+/* scroll
+-----------------------------------*/
+.arrowWrap {
+	position: fixed;
+	right: 11.2vw;
+	bottom: 2.6vw;
+
+	.arrowInner {
+
+		p {
+			font-size: 2.3vw;
+			text-align: end;
+		}
+
+		.arrow {
+			width: 0.4vw;
+			height: 8.4vw;
+				margin: 1.6vw auto 0;
+			background-color: #eee;
+			position: relative;
+			overflow: hidden;
+
+			&::before {
+				content: '';
+				width: 0.6vw;
+				height: 8.4vw;
+				margin: 1.6vw auto 0;
+				background-color: #000;
+				position: absolute;
+				top: -15vw;
+				left: 0.13vw;
+				-webkit-animation: arrow 2.5s ease 0s infinite normal;
+				animation: arrow 2.5s ease 0s infinite normal;
+			}
+		}
+	}
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  60% {
+    -webkit-transform: translate3d(-50%, 13.4vw, 0);
+    transform: translate3d(-50%, 13.4vw, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-50%, 13.4vw, 0);
+    transform: translate3d(-50%, 13.4vw, 0);
+  }
+}
+
+@media screen and (min-width: $MIN_SP_WIDTH) {
+.arrowWrap {
+	position: fixed;
+	right: 4.4vw;
+	bottom: 0.83vw;
+
+	.arrowInner {
+
+		p {
+			font-size: 0.83vw;
+			text-align: end;
+		}
+
+		.arrow {
+			width: 0.1vw;
+			height: 3.3vw;
+			margin: 0.6vw auto 0;
+			background-color: #eee;
+			position: relative;
+			overflow: hidden;
+
+			&::before {
+				content: '';
+				width: 1.1vw;
+				height: 3.3vw;
+				margin: 0.6vw auto 0;
+				background-color: #000;
+				position: absolute;
+				top: -4.3vw;
+				left: 0.13vw;
+				-webkit-animation: arrow 2.5s ease 0s infinite normal;
+				animation: arrow 2.5s ease 0s infinite normal;
+			}
+		}
+	}
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  60% {
+    -webkit-transform: translate3d(-50%, 13.4vw, 0);
+    transform: translate3d(-50%, 3.8vw, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-50%, 13.4vw, 0);
+    transform: translate3d(-50%, 3.8vw, 0);
+  }
+}
+}
+
+
+
+
+
