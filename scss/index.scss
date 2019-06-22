@@ -6,7 +6,7 @@
 /* main-visual
 -----------------------------------*/
 .index .main-visual {
-	margin-top: 240px;
+	margin-top: 32vw;
 
 	.img-area {
 		background-color: #666;
@@ -18,11 +18,12 @@
 
 @media screen and (min-width: $MIN_SP_WIDTH) {
 .index .main-visual {
-	margin-top: 240px;
-
+	margin-top: 12.5vw;
+	
 	.img-area {
 		margin: 0 auto;
-		width: 1440px;
+		height: 31.25vw;
+		width: 75vw;
 	}
 }
 }
@@ -30,7 +31,7 @@
 /* what-we-are
 -----------------------------------*/
 .index .what-we-are {
-	margin-top: 40.4vw;
+	margin-top: 60.6vw;
 
 	.tx-area {
 		margin: 15.3vw auto 0;
@@ -40,6 +41,31 @@
 			margin-bottom: 12.3vw;
 		}
 	}
+}
+
+@media screen and (min-width: $MIN_SP_WIDTH) {
+.index .what-we-are {
+	margin: 23.6vw 16.7vw 0;
+
+	.heading02 {
+		text-align: left;
+	}
+
+	.tx-area {
+		float: right;
+		margin: 0;
+		width: 25.3vw;
+
+		p:not(:last-of-type) {
+			margin-bottom: 1.8vw;
+		}
+
+	}
+
+	.buttonOverlay {
+		float: left;
+	}
+}
 }
 
 /* what-we-do
@@ -74,6 +100,15 @@
 	}
 }
 
+@media screen and (min-width: $MIN_SP_WIDTH) {
+.index .what-we-do {
+	margin-top: 13.3vw;
+
+	.heading02 {
+		text-align: right;
+	}
+}
+}
 /* we-worked
 -----------------------------------*/
 .index .we-worked {

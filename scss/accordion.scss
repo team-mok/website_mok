@@ -88,11 +88,11 @@ header {
                 height: .1vw;
 
                 &:first-of-type {
-                    top: 0;
+                    top: .1vw;
                 }
 
                 &:nth-of-type(2) {
-                    top: 0.9vw;
+                    top: .9vw;
                 }
 
                 &:last-of-type {
@@ -107,8 +107,8 @@ header {
             .menu-inner span {
 
                 &:first-child {
-                    top: 0.7vw;
-                    left: -0.4vw;
+                    top: .7vw;
+                    left: -.4vw;
                 }
 
                 &:nth-child(2) {
@@ -116,8 +116,8 @@ header {
                 }
 
                 &:last-child {
-                    top: 0.7vw;
-                    left: -0.4vw;
+                    top: .7vw;
+                    left: -.4vw;
                 }
             }
         }

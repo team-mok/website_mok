@@ -60,15 +60,23 @@ ul { list-style: none; }
 
 .heading03 { font-size: 3.2vw; font-weight: bold; margin-bottom: 4.3vw; text-align: center; }
 
+@media screen and (min-width: 768px) { .heading02 { font-size: 3.3vw; height: 4.9vw; }
+  .heading03 { font-size: 1vw; margin-bottom: 1.25vw; text-align: center; } }
+
 /* テキストエリア
 -----------------------------------*/
 .tx-area { font-size: 3.2vw; text-align: center; line-height: 2.2; }
 
 .tx-area02 { font-size: 2.7vw; text-align: center; line-height: 2.2; }
 
+@media screen and (min-width: 768px) { .tx-area { font-size: 1vw; }
+  .tx-area02 { font-size: 0.8vw; } }
+
 /* サークル
 -----------------------------------*/
 .circle { border: solid 1px #000; border-radius: 50%; height: 27vw; margin: 0 auto 5.3vw; width: 27vw; }
+
+@media screen and (min-width: 768px) { .circle { height: 8.3vw; margin-bottom: 2.1vw; width: 8.3vw; } }
 
 /* buttonOverlay
 -----------------------------------*/
@@ -83,6 +91,12 @@ ul { list-style: none; }
 .buttonOverlay a::after { content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%; border: 1px solid #474E51; }
 
 .buttonOverlay a:hover::before { -webkit-transform: translate(3vw, -3vw); -ms-transform: translate(3vw, -3vw); transform: translate(3vw, -3vw); }
+
+@media screen and (min-width: 768px) { .buttonOverlay { margin-top: 16vw; }
+  .buttonOverlay a { height: 4.1vw; width: 16.7vw; }
+  .buttonOverlay a span { position: absolute; top: 50%; left: 50%; color: #fff; font-size: 1.2vw; font-weight: bold; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); letter-spacing: .2em; }
+  .buttonOverlay a::before { content: ''; position: absolute; height: 100%; width: 100%; top: 0.8vw; right: 0.8vw; background-color: #000; z-index: -1; -webkit-transition: -webkit-transform .2s ease-in-out; transition: -webkit-transform .2s ease-in-out; -o-transition: transform .2s ease-in-out; transition: transform .2s ease-in-out; transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }
+  .buttonOverlay a:hover::before { -webkit-transform: translate(0.8vw, -0.8vw); -ms-transform: translate(0.8vw, -0.8vw); transform: translate(0.8vw, -0.8vw); } }
 
 .textRightLeft { height: 32vw; width: 78.9vw; text-align: center; overflow: hidden; background: #000; position: relative; }
 
@@ -136,12 +150,12 @@ header .menu .g-nv { display: none; }
 
 @media screen and (min-width: 768px) { header .menu { top: 50vh; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); left: 4.3vw; width: 3.3vw; height: 2vw; }
   header .menu .menu-inner span { height: .1vw; }
-  header .menu .menu-inner span:first-of-type { top: 0; }
-  header .menu .menu-inner span:nth-of-type(2) { top: 0.9vw; }
+  header .menu .menu-inner span:first-of-type { top: .1vw; }
+  header .menu .menu-inner span:nth-of-type(2) { top: .9vw; }
   header .menu .menu-inner span:last-of-type { top: 1.8vw; }
-  header .menu.pushed .menu-inner span:first-child { top: 0.7vw; left: -0.4vw; }
+  header .menu.pushed .menu-inner span:first-child { top: .7vw; left: -.4vw; }
   header .menu.pushed .menu-inner span:nth-child(2) { opacity: 0; }
-  header .menu.pushed .menu-inner span:last-child { top: 0.7vw; left: -0.4vw; } }
+  header .menu.pushed .menu-inner span:last-child { top: .7vw; left: -.4vw; } }
 
 /* scroll
 -----------------------------------*/
@@ -190,7 +204,7 @@ header { position: fixed; top: 9.6vw; width: 100%; }
 
 header section { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-header section > h1 { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 4.3vw; height: 7.9vw; margin-left: 8vw; width: 15.2vw; }
+header section > h1 { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 4.3vw; height: 7.9vw; margin-left: 8vw; width: 15.2vw; background-color: #000; }
 
 header section .flex-wrapper { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; position: relative; margin: 0 0 0 auto; }
 

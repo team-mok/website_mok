@@ -39,6 +39,22 @@
 	text-align: center;
 }
 
+
+@media screen and (min-width: $MIN_SP_WIDTH) {
+.heading02 {
+	font-size: 3.3vw;
+	height: 4.9vw;
+}
+
+.heading03 {
+	font-size: 1vw;
+	margin-bottom: 1.25vw;
+	text-align: center;
+}
+}
+
+
+
 /* テキストエリア
 -----------------------------------*/
 .tx-area {
@@ -53,6 +69,16 @@
 	line-height: 2.2;
 }
 
+@media screen and (min-width: $MIN_SP_WIDTH) {
+.tx-area {
+	font-size: 1vw;
+}
+
+.tx-area02 {
+	font-size: 0.8vw;
+}
+}
+
 /* サークル
 -----------------------------------*/
 .circle {
@@ -63,6 +89,13 @@
 	width: 27vw;
 }
 
+@media screen and (min-width: $MIN_SP_WIDTH) {
+.circle { 
+	height: 8.3vw;
+	margin-bottom: 2.1vw;
+	width: 8.3vw;
+}
+}
 @import "buttonOverlay";
 
 @import "textRightLeft";			
