@@ -13,3 +13,13 @@ footer {
     	font-size: 1.6vw;
     }
 }
+
+@media screen and (min-width: $MIN_SP_WIDTH) {
+footer {
+	height: 12.4vw;
+
+    p {
+    	font-size: 0.6vw;
+    }
+}
+}

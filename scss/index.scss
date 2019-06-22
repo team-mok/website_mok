@@ -106,6 +106,39 @@
 
 	.heading02 {
 		text-align: right;
+		margin-right: 16.7vw;
+	}
+
+	.circle-wrapper {
+		grid-template-columns: repeat(4, 1fr);
+		margin: 2vw 25.8vw 0 21.3vw;
+		width: 52.8vw;
+
+		.circle-area {
+			width: 13.4vw;
+
+			&:first-of-type {
+				grid-column: 1/2;
+			}
+
+			&:nth-of-type(2) {
+				margin: 4.2vw auto 0;
+			}
+
+			&:last-of-type {
+				grid-column: 4/5;
+				margin: 8.3vw 0 0 auto;
+			}
+
+			.tx-area02 {
+				margin-bottom: 2vw;
+			}
+		}
+	}
+
+	.buttonOverlay {
+		float: right;
+		margin: 2.1vw 14.5vw 0 0;
 	}
 }
 }
@@ -141,14 +174,6 @@
 			&:nth-of-type(5) {
 				margin: 0 0 auto auto;
 				padding-left: 15.9vw;
-			}
-
-			&:nth-of-type(odd) {
-				float: left;
-			}
-
-			&:nth-of-type(even) {
-				float: right;
 			}
 
 			&:not(:last-of-type) {
@@ -191,6 +216,76 @@
 			}
 		}
 	}
+}
+@media screen and (max-width: 767px) {
+.index .we-worked .slick-list .slide-img {
+	&:nth-of-type(odd) { 
+		float: left; 
+	}
+
+	&:nth-of-type(even) { 
+		float: right; 
+	}
+}
+}
+
+@media screen and (min-width: $MIN_SP_WIDTH) {
+.index .we-worked {
+	margin-top: 9.6vw;
+
+	.slick-list {
+		margin: 0 auto;
+
+		.slide-img {
+			width: 20.8vw;
+
+			&:nth-of-type(1),
+			&:nth-of-type(2),
+			&:nth-of-type(3),
+			&:nth-of-type(4),
+			&:nth-of-type(5) {
+				margin: auto;
+				padding: 0;
+			}
+
+			&:not(:last-of-type) {
+				margin-bottom: 0;
+			}
+
+			a {
+				display: block;
+				position: relative;
+				height: 11.8vw;
+				width: 20.8vw;
+				margin: 0 auto;
+
+				.img-area {
+					background-color: #666;
+					height: 100%;
+					width: 100%;
+				}
+
+				div {
+					margin-left: 1.8vw;
+
+					.day {
+						font-size: 0.8vw;
+						margin-bottom: 0.4vw
+					}
+
+					.tx-area02 {
+						margin-bottom: 1.9vw;
+					}
+				}	
+			}
+		}
+	}
+
+	.buttonOverlay {
+		float: left;
+		margin: 2.0vw 0 0 17.5vw;
+	}
+}
 }
 
 /* we-worked
@@ -254,6 +349,62 @@
 		margin: 32vw auto 0;
 
 	}
+}
+
+@media screen and (min-width: $MIN_SP_WIDTH) {
+.index .about-member {
+	margin-top: 13.3vw;
+
+	.circle-wrapper {
+		margin: 4.2vw auto 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		width: 39vw;
+
+
+		.circle-area {
+			width: 8.3vw;
+
+			&:nth-of-type(1) {
+				grid-column: 1/2;
+				margin: 0 auto 0 0;
+			}
+
+			&:nth-of-type(2) {
+				grid-column: 2/4;
+				margin: 0 auto;
+			}
+
+			&:nth-of-type(3) {
+				display: inline-block;
+				grid-column: 4/5;
+				margin: 0 0 0 auto;
+			}
+
+			.circle {
+				margin-bottom: 2vw;
+			}
+
+			.tx-area02 {
+				font-size: 10px;
+				margin-bottom: 0.5vw;
+			}
+
+			.ic-area {
+				text-align: center;
+
+				p:first-of-type {
+					margin-right: 1.3vw;
+				}
+			}	
+		}
+	}
+
+	.textRightLeft {
+		margin: 12.5vw auto 0;
+
+	}
+}
 }
 
 

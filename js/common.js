@@ -1,29 +1,23 @@
 $(function(){
-var isSP;
-    $(window).on('load resize', function(){
-        if ( window.innerWidth > 767 ) {
-            isSP = false;
-        } else if ( window.innerWidth < 768 ) {
-            isSP = true;
-        }
-    });
 
-    var classVal = $('article').attr('class');
-    var classVals = classVal.split(' ');
-    $('.g-nv ul li').each(function(){
-        var dirName = $(this).find('a').attr('href');
-        for (var i = 0; i < classVals.length; i++) {
-            if (classVals[i] == 'index') {
-                classVals[i] = 'home';
-            }
-            if (dirName == '/') {
-                dirName = 'home';
-            }
-            if (dirName.match(classVals[i])) {
-                $(this).addClass('active');
-            }
+    var mql = window.matchMedia('screen and (min-width: 768px)');
+    function checkBreakPoint(mql) {
+        if (mql.matches) {
+            $('.slick-list').not('.slick-initialized').slick({
+                autoplay:true,
+                autoplaySpeed:5000,
+                centerMode:true,
+                centerPadding: '15.7%',
+                slidesToShow:3,
+            });
+        } else {
+            $('.slick-list.slick-initialized').slick('unslick');
         }
-    });
+    }
+
+    mql.addListener(checkBreakPoint);
+    checkBreakPoint(mql);
+
 
 //アコーディオン、ハンバーガー
     $('.menu').on('click', function(){

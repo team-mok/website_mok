@@ -12,11 +12,13 @@
 		<meta property="og:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://").$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]; ?>">
 		<meta property="og:image" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://").$_SERVER["HTTP_HOST"]; ?>/images/share.png">
 		<link rel="icon" href="/favicon.ico">
-		<?php if ( $add_css_area !== '' ) echo $add_css_area."\n"; ?>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
 		<link rel="stylesheet" href="/css/import.css">
-		<?php if ( $add_js_area !== '' ) echo $add_js_area."\n"; ?>
+		<?php if ( $add_css_area !== '' ) echo $add_css_area."\n"; ?>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 		<script src="/js/jquery.js"></script>
 		<script src="/js/common.js"></script>
+		<?php if ( $add_js_area !== '' ) echo $add_js_area."\n"; ?>
 	</head>
 	<body id="top"<?php if ( $page_class !== '' ) echo ' class="' . $page_class . '"'; ?>>
 		<header>
