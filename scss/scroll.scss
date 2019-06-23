@@ -35,6 +35,20 @@
 			}
 		}
 	}
+
+	.topInner {
+		display: none;
+	}
+
+	&.active {
+		.arrowInner {
+			display: none;
+		}
+
+		.topInner {
+			display: block;
+		}
+	}
 }
 
 @keyframes arrow {

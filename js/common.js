@@ -5,10 +5,12 @@ $(function(){
         if (mql.matches) {
             $('.slick-list').not('.slick-initialized').slick({
                 autoplay:true,
-                autoplaySpeed:5000,
+                autoplaySpeed:0,
                 centerMode:true,
                 centerPadding: '15.7%',
+                cssEase: 'linear',
                 slidesToShow:3,
+                speed: 10000,
             });
         } else {
             $('.slick-list.slick-initialized').slick('unslick');
@@ -48,12 +50,22 @@ $(function(){
     //スクロールメインビジュアルクラス
         if($(window).scrollTop() > p){
         	$('header').addClass('white'); 
+            $('.arrowWrap').addClass('active'); 
       	}else{
         	$('header').removeClass('white'); 
+            $('.arrowWrap').removeClass('active'); 
       }
 
         startPos = winScrollTop;
     });
+
+    //topに戻る
+    var pagetop = $('.topInner');
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+
 
 });
 

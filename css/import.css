@@ -16,7 +16,7 @@ blockquote, q { quotes: none; }
 
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 
-a { color: #000; margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration: none; }
+a { color: #000; cursor: pointer; margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration: none; }
 
 a:hover { text-decoration: none; }
 
@@ -127,6 +127,18 @@ ul { list-style: none; }
 @media screen and (min-width: 768px) { .textRightLeft { height: 12.5vw; width: 75vw; }
   .textRightLeft a span { font-size: 2.1vw; } }
 
+.lineThrough { position: relative; display: block; cursor: pointer; }
+
+.lineThrough:before, .lineThrough:after { content: ''; position: absolute; width: 0%; height: 2px; top: 50%; margin-top: -0.5px; background: #fff; }
+
+.lineThrough:before { left: -2.5px; }
+
+.lineThrough:after { right: 2.5px; background: #000; -webkit-transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); -o-transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); }
+
+.lineThrough:hover:before { background: #000; width: 100%; -webkit-transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); -o-transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); }
+
+.lineThrough:hover:after { background: transparent; width: 100%; -webkit-transition: 0s; -o-transition: 0s; transition: 0s; }
+
 /* アコーディオン
 -----------------------------------*/
 header { position: relative; }
@@ -155,7 +167,7 @@ header .menu .g-nv { display: none; }
   header .menu .menu-inner span { height: .1vw; }
   header .menu .menu-inner span:first-of-type { top: .1vw; }
   header .menu .menu-inner span:nth-of-type(2) { top: .9vw; }
-  header .menu .menu-inner span:last-of-type { top: 1.8vw; }
+  header .menu .menu-inner span:last-of-type { top: 1.7vw; }
   header .menu.pushed .menu-inner span:first-child { top: .7vw; left: -.4vw; }
   header .menu.pushed .menu-inner span:nth-child(2) { opacity: 0; }
   header .menu.pushed .menu-inner span:last-child { top: .7vw; left: -.4vw; } }
@@ -169,6 +181,12 @@ header .menu .g-nv { display: none; }
 .arrowWrap .arrowInner .arrow { width: 0.4vw; height: 8.4vw; margin: 1.6vw auto 0; background-color: #eee; position: relative; overflow: hidden; }
 
 .arrowWrap .arrowInner .arrow::before { content: ''; width: 0.6vw; height: 8.4vw; margin: 1.6vw auto 0; background-color: #000; position: absolute; top: -15vw; left: 0.13vw; -webkit-animation: arrow 2.5s ease 0s infinite normal; animation: arrow 2.5s ease 0s infinite normal; }
+
+.arrowWrap .topInner { display: none; }
+
+.arrowWrap.active .arrowInner { display: none; }
+
+.arrowWrap.active .topInner { display: block; }
 
 @-webkit-keyframes arrow { 0% { -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); }
