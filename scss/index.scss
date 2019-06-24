@@ -102,7 +102,8 @@
 
 @media screen and (min-width: $MIN_SP_WIDTH) {
 .index .what-we-do {
-	margin-top: 13.3vw;
+	margin-top: 0;
+	padding-top: 13.3vw;
 
 	.heading02 {
 		text-align: right;
@@ -113,9 +114,15 @@
 		grid-template-columns: repeat(4, 1fr);
 		margin: 2vw 25.8vw 0 21.3vw;
 		width: 52.8vw;
+		height: 26.92vw;
 
 		.circle-area {
 			width: 13.4vw;
+
+			&#cia1,
+			&#cia2 {
+				transition: all 0.5s; 
+			}
 
 			&:first-of-type {
 				grid-column: 1/2;
@@ -239,76 +246,36 @@
 		.slide-img {
 			width: 20.8vw;
 
-			&:nth-of-type(1) {
+			&:nth-of-type(1),
+			&:nth-of-type(6),
+			&:nth-of-type(11) { 
 				margin: auto;
 				padding: 10.3vw 0 0;
 			}
 
-			&:nth-of-type(2) {
-				margin: auto;
-				padding: 0;
-			}
-
-			&:nth-of-type(3) {
-				margin: auto;
-				padding: 3.9vw 0 0;
-			}
-
-			&:nth-of-type(4) {
-				margin: auto;
-				padding: 12.4vw 0 0;
-			}
-
-			&:nth-of-type(5) {
-				margin: auto;
-				padding: 4.3vw 0 0;
-			}
-
-			&:nth-of-type(6) {
-				margin: auto;
-				padding: 10.3vw 0 0;
-			}
-
-			&:nth-of-type(7) {
-				margin: auto;
-				padding: 0;
-			}
-
-			&:nth-of-type(8) {
-				margin: auto;
-				padding: 3.9vw 0 0;
-			}
-
-			&:nth-of-type(9){
-				margin: auto;
-				padding: 12.4vw 0 0;
-			}
-
-			&:nth-of-type(10) {
-				margin: auto;
-				padding: 4.3vw 0 0;
-			}
-
-			&:nth-of-type(11) {
-				margin: auto;
-				padding: 10.3vw 0 0;
-			}
-
+			&:nth-of-type(2),
+			&:nth-of-type(7),
 			&:nth-of-type(12) {
 				margin: auto;
 				padding: 0;
 			}
 
-			&:nth-of-type(13){
+			&:nth-of-type(3),
+			&:nth-of-type(8),
+			&:nth-of-type(13) {
 				margin: auto;
 				padding: 3.9vw 0 0;
 			}
 
+			&:nth-of-type(4),
+			&:nth-of-type(9),
 			&:nth-of-type(14) {
 				margin: auto;
 				padding: 12.4vw 0 0;
 			}
 
+			&:nth-of-type(5),
+			&:nth-of-type(10),
 			&:nth-of-type(15) {
 				margin: auto;
 				padding: 4.3vw 0 0;

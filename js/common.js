@@ -57,6 +57,32 @@ $(function(){
       }
 
         startPos = winScrollTop;
+
+
+        if (mql.matches) {
+            var ciPos = $(".what-we-do").offset().top,
+                cih = $(".what-we-do").height(),
+                st = $(window).scrollTop(),
+                wh = window.innerHeight,
+                cu = (1 - (ciPos  - st ) / wh),
+                cscroll = winScrollTop - ciPos,
+                cuv = (cu * cscroll) / 5,
+                cur = Math.floor( cuv * Math.pow( 10, 1 ) ) / Math.pow( 10, 1 ) ;
+            if (cur >= 50) {
+                cur = 50;
+            }
+            if ( st > ciPos ) {
+                $("#cia1").css({transform: 'translateY(' + (cur) + '%)'});
+                $("#cia2").css({transform: 'translateY(' + '-' + (cur) + '%)'});
+                console.log(cur);
+            }  else if (st < ciPos) {
+                cur = 0;
+                $("#cia1").css({transform: 'translateY(' + (cur) + '%)'});
+                $("#cia2").css({transform: 'translateY(' + '-' + (cur) + '%)'});
+                console.log(cur);
+            }
+        }
+
     });
 
     //topに戻る

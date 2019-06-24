@@ -5,97 +5,110 @@
 -----------------------------------*/
 header {
 	position: fixed;
-	top: 9.6vw;
+	top: 0;
+	height: 22.9vw;
 	width: 100%;
+	z-index: 100;
 
-	section {
-		display: flex;
+	.headerInner {
+		margin-top: 9.6vw;
 
-		> h1 {
-			align-items: center;
-    		display: flex;
-    		font-size: 4.3vw;
-    		height: 7.9vw;
-    		margin-left: 8vw;
-    		width: 15.2vw;
-    		background-color: #000;
-		}
-
-		.flex-wrapper {
-			align-items: flex-end;
+		section {
 			display: flex;
-			justify-content: flex-end;
-			position: relative;
-			margin: 0 0 0 auto;
 
-			.mail {
-				position: absolute;
-				top: 100%;
-				right: 10.7vw;
-				transform: translate(0, -50%);
+			> h1 {
+				align-items: center;
+	    		display: flex;
+	    		font-size: 4.3vw;
+	    		height: 7.9vw;
+	    		margin-left: 8vw;
+	    		width: 15.2vw;
+	    		background-color: #000;
+			}
 
-				span {
-					background-color: $MAIN_COLOR ;
-					display: block;
-					height: 10.7vw;
-					width: 10.7vw;
+			.flex-wrapper {
+				align-items: flex-end;
+				display: flex;
+				justify-content: flex-end;
+				position: relative;
+				margin: 0 0 0 auto;
+
+				.mail {
+					position: absolute;
+					top: 100%;
+					right: 10.7vw;
+					transform: translate(0, -50%);
+
+					span {
+						background-color: $MAIN_COLOR ;
+						display: block;
+						height: 10.7vw;
+						width: 10.7vw;
+					}
+				}
+
+				.h-nv {
+					display: none;
 				}
 			}
-
-			.h-nv {
-				display: none;
-			}
 		}
+	}
+	&.white {
+		background-color: $MAIN_COLOR2;
 	}
 }
 
 @media screen and (min-width: $MIN_SP_WIDTH) {
 header {
-	position: fixed;
-	top: 3.8vw;
+	height: 8.8vw;
 
-	section {
-		display: flex;
+	.headerInner {
+		margin-top: 3.8vw;
 
-		> h1 {
-			align-items: center;
-    		display: flex;
-    		font-size: 2vw;
-    		height: 3vw;
-    		margin-left: 3vw;
-    		width: 6vw;
-		}
+		section {
+			display: flex;
 
-		.flex-wrapper {
-
-			.mail {
-				position: absolute;
-				top: 100%;
-				right: 4.1vw;
-				transform: translate(0, -50%);
-
-				span {
-					background-color: $MAIN_COLOR;
-					display: block;
-					height: 4.1vw;
-					width: 4.1vw;
-				}
+			> h1 {
+				align-items: center;
+	    		display: flex;
+	    		font-size: 2vw;
+	    		height: 3vw;
+	    		margin-left: 3vw;
+	    		width: 6vw;
 			}
 
-			.h-nv {
-				display: block;
-				margin-right: 12.5vw;
+			.flex-wrapper {
 
-				ul {
-					display: flex;
-					justify-content: space-between;
+				.mail {
+					position: absolute;
+					top: 100%;
+					right: 4.1vw;
+					transform: translate(0, -50%);
 
-					li:not(:last-of-type) {
-						margin-right: 2.1vw;
+					span {
+						background-color: $MAIN_COLOR;
+						display: block;
+						height: 4.1vw;
+						width: 4.1vw;
+					}
+				}
+
+				.h-nv {
+					display: block;
+					margin-right: 12.5vw;
+
+					ul {
+						display: flex;
+						justify-content: space-between;
+
+						li:not(:last-of-type) {
+							margin-right: 2.1vw;
+						}
 					}
 				}
 			}
 		}
 	}
+
 }
 }
