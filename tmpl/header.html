@@ -20,7 +20,7 @@
 		<script src="/js/common.js"></script>
 		<?php if ( $add_js_area !== '' ) echo $add_js_area."\n"; ?>
 	</head>
-	<body id="top"<?php if ( $page_class !== '' ) echo ' class="' . $page_class . '"'; ?>>
+	<body ontouchstart="" id="top"<?php if ( $page_class !== '' ) echo ' class="' . $page_class . '"'; ?>>
 		<header>
 			<div class="headerInner">
 				<section> 
@@ -37,21 +37,6 @@
 						<div class="mail">
 							<span><a href="/contact"></a></span>
 						</div>
-					</div>
-					<div class="menu">
-						<div class="menu-inner">
-						<span></span><span></span><span></span>
-						</div>
-					</div>
-					<div class="g-nv closed" style="display: none;">
-						<nav>
-							<ul>
-								<li><a href="">WE ARE</a></li>
-								<li><a href="">WE DO</a></li>
-								<li><a href="">WE WORK</a></li>
-								<li><a href="">ABOUT MEMBER</a></li>
-							</ul>
-						</nav>
 					</div>
 	 				<div class="arrowWrap">
 	    				<div class="arrowInner">
@@ -70,3 +55,20 @@
 				</section>
 			</div>
 		</header>
+		<div class="drawer-wrapper">
+			<div class="menu">
+				<div class="menu-inner">
+					<span></span><span></span><span></span>
+				</div>
+			</div>
+			<div class="g-nv closed">
+				<nav>
+					<ul>
+						<li class="buttonLeft"><a href="">WE ARE</a></li>
+						<li class="buttonLeft"><a href="">WE DO</a></li>
+						<li class="buttonLeft"><a href="">WE WORK</a></li>
+						<li class="buttonLeft"><a href="">ABOUT MEMBER</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>

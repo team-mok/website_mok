@@ -139,38 +139,74 @@ ul { list-style: none; }
 
 .lineThrough::hover:after { background: transparent; width: 100%; -webkit-transition: 0s; -o-transition: 0s; transition: 0s; }
 
+.buttonLeft { height: 100%; width: 100%; overflow: hidden; background: #FFF; position: relative; line-height: 40px; color: #000; }
+
+.buttonLeft::before { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 100%; -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); background: #000; -webkit-transition: -webkit-transform .2s ease-in-out; transition: -webkit-transform .2s ease-in-out; -o-transition: transform .2s ease-in-out; transition: transform .2s ease-in-out; transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }
+
+.buttonLeft:hover::before { -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
+
+.buttonLeft a { position: relative; z-index: 1; }
+
+.buttonLeft:hover a { color: #FFF; }
+
 /* アコーディオン
 -----------------------------------*/
-header { position: relative; }
+.drawer-wrapper { position: relative; z-index: 100; }
 
-header .menu { position: fixed; bottom: 2.6vw; left: 10.7vw; width: 8.5vw; height: 5vw; cursor: pointer; z-index: 101; }
+.drawer-wrapper .g-nv.opened { left: 0; }
 
-header .menu .menu-inner { position: relative; width: 100%; display: block; margin: auto; }
+.drawer-wrapper .g-nv.opened li { left: 0; }
 
-header .menu .menu-inner span { position: absolute; left: 0; display: block; width: 100%; height: .6vw; background: #000; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; }
+.drawer-wrapper .g-nv.opened li:nth-of-type(1) { -webkit-transition-delay: 0.3s; -o-transition-delay: 0.3s; transition-delay: 0.3s; }
 
-header .menu .menu-inner span:first-of-type { top: 0; }
+.drawer-wrapper .g-nv.opened li:nth-of-type(2) { -webkit-transition-delay: 0.6s; -o-transition-delay: 0.6s; transition-delay: 0.6s; }
 
-header .menu .menu-inner span:nth-of-type(2) { top: 2.2vw; }
+.drawer-wrapper .g-nv.opened li:nth-of-type(3) { -webkit-transition-delay: 0.9s; -o-transition-delay: 0.9s; transition-delay: 0.9s; }
 
-header .menu .menu-inner span:last-of-type { top: 4.4vw; }
+.drawer-wrapper .g-nv.opened li:nth-of-type(4) { -webkit-transition-delay: 1.2s; -o-transition-delay: 1.2s; transition-delay: 1.2s; }
 
-header .menu.pushed .menu-inner span:first-child { top: 2.1vw; left: -0.6vw; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+.drawer-wrapper .g-nv { background-color: #FFF; left: 100vw; height: 100vh; position: fixed; top: 0; -webkit-transition: left 0.5s ease; -o-transition: left 0.5s ease; transition: left 0.5s ease; width: 100%; }
 
-header .menu.pushed .menu-inner span:nth-child(2) { opacity: 0; }
+.drawer-wrapper .g-nv li { left: 100vw; font-size: 4.5vh; font-weight: bold; height: 20%; position: absolute; -webkit-transition: left 0.5s ease; -o-transition: left 0.5s ease; transition: left 0.5s ease; width: 100%; }
 
-header .menu.pushed .menu-inner span:last-child { top: 2.1vw; left: -0.6vw; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+.drawer-wrapper .g-nv li:nth-of-type(1) { -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; top: 3%; }
 
-header .menu .g-nv { display: none; }
+.drawer-wrapper .g-nv li:nth-of-type(2) { -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; top: 23%; }
 
-@media screen and (min-width: 768px) { header .menu { top: 50vh; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); left: 4.3vw; width: 3.3vw; height: 2vw; }
-  header .menu .menu-inner span { height: .1vw; }
-  header .menu .menu-inner span:first-of-type { top: .1vw; }
-  header .menu .menu-inner span:nth-of-type(2) { top: .9vw; }
-  header .menu .menu-inner span:last-of-type { top: 1.7vw; }
-  header .menu.pushed .menu-inner span:first-child { top: .7vw; left: -.4vw; }
-  header .menu.pushed .menu-inner span:nth-child(2) { opacity: 0; }
-  header .menu.pushed .menu-inner span:last-child { top: .7vw; left: -.4vw; } }
+.drawer-wrapper .g-nv li:nth-of-type(3) { -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; top: 43%; }
+
+.drawer-wrapper .g-nv li:nth-of-type(4) { -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; top: 63%; }
+
+.drawer-wrapper .g-nv li a { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; padding-left: 5.2vw; width: 100%; }
+
+.drawer-wrapper .menu { position: fixed; bottom: 2.6vw; left: 10.7vw; width: 8.5vw; height: 5vw; cursor: pointer; z-index: 100; }
+
+.drawer-wrapper .menu .menu-inner { position: relative; width: 100%; display: block; margin: auto; z-index: 100; }
+
+.drawer-wrapper .menu .menu-inner span { position: absolute; left: 0; display: block; width: 100%; height: .6vw; background: #000; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; }
+
+.drawer-wrapper .menu .menu-inner span:first-of-type { top: 0; }
+
+.drawer-wrapper .menu .menu-inner span:nth-of-type(2) { top: 2.2vw; }
+
+.drawer-wrapper .menu .menu-inner span:last-of-type { top: 4.4vw; }
+
+.drawer-wrapper .menu.pushed { top: 90%; }
+
+.drawer-wrapper .menu.pushed .menu-inner span:first-child { top: 2.1vw; left: -.6vw; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+
+.drawer-wrapper .menu.pushed .menu-inner span:nth-child(2) { opacity: 0; }
+
+.drawer-wrapper .menu.pushed .menu-inner span:last-child { top: 2.1vw; left: -.6vw; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+@media screen and (min-width: 768px) { .drawer-wrapper .menu { top: 50vh; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); left: 4.3vw; width: 3.3vw; height: 2vw; }
+  .drawer-wrapper .menu .menu-inner span { height: .1vw; }
+  .drawer-wrapper .menu .menu-inner span:first-of-type { top: .1vw; }
+  .drawer-wrapper .menu .menu-inner span:nth-of-type(2) { top: .9vw; }
+  .drawer-wrapper .menu .menu-inner span:last-of-type { top: 1.7vw; }
+  .drawer-wrapper .menu.pushed .menu-inner span:first-child { top: .7vw; left: -.4vw; }
+  .drawer-wrapper .menu.pushed .menu-inner span:nth-child(2) { opacity: 0; }
+  .drawer-wrapper .menu.pushed .menu-inner span:last-child { top: .7vw; left: -.4vw; } }
 
 /* scroll
 -----------------------------------*/

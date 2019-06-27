@@ -23,15 +23,16 @@ $(function(){
 
 //アコーディオン、ハンバーガー
     $('.menu').on('click', function(){
-        if ( $('header .menu').hasClass('pushed') == true ) {
-            $('header .g-nv').removeClass('opened');
-            $('header .g-nv').addClass('closed');
+        if ( $('.menu').hasClass('pushed') == true ) {
+            $('.g-nv').removeClass('opened');
+            $('.g-nv').addClass('closed');
+            $('html').css('overflow', 'scroll');
         } else {
-            $('header .g-nv').addClass('opened');
-            $('header .g-nv').removeClass('closed');
+            $('.g-nv').addClass('opened');
+            $('.g-nv').removeClass('closed');
+            $('html').css('overflow', 'hidden');
         }
-        $('header .menu').toggleClass('pushed');
-        $('.g-nv').slideToggle();
+        $('.menu').toggleClass('pushed');
     });
 
   //スクロール→ヘッダーフェード
@@ -43,9 +44,11 @@ $(function(){
         if (winScrollTop >= startPos) {
             if(winScrollTop >= 200){
                 $('header').fadeOut(700);;
+                $('.menu').fadeOut(700);;
             }
         } else {
             $('header').fadeIn(700);;
+            $('.menu').fadeIn(700);;
         }
     //スクロールメインビジュアルクラス
         if($(window).scrollTop() > p){
@@ -58,7 +61,7 @@ $(function(){
 
         startPos = winScrollTop;
 
-
+    //スクロールに合わせて
         if (mql.matches) {
             var ciPos = $(".what-we-do").offset().top,
                 cih = $(".what-we-do").height(),
@@ -66,7 +69,7 @@ $(function(){
                 wh = window.innerHeight,
                 cu = (1 - (ciPos  - st ) / wh),
                 cscroll = winScrollTop - ciPos,
-                cuv = (cu * cscroll) / 5,
+                cuv = (cu * cscroll) / 10,
                 cur = Math.floor( cuv * Math.pow( 10, 1 ) ) / Math.pow( 10, 1 ) ;
             if (cur >= 50) {
                 cur = 50;
@@ -74,12 +77,10 @@ $(function(){
             if ( st > ciPos ) {
                 $("#cia1").css({transform: 'translateY(' + (cur) + '%)'});
                 $("#cia2").css({transform: 'translateY(' + '-' + (cur) + '%)'});
-                console.log(cur);
             }  else if (st < ciPos) {
                 cur = 0;
                 $("#cia1").css({transform: 'translateY(' + (cur) + '%)'});
                 $("#cia2").css({transform: 'translateY(' + '-' + (cur) + '%)'});
-                console.log(cur);
             }
         }
 
